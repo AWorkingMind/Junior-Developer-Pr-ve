@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html lang="da">
 <head>
+    <!-- Font-løsning -->
+    <script src="https://kit.fontawesome.com/61cb53b069.js" crossorigin="anonymous"></script>
+    <!-- Font-løsning -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ShopHelten - Junior Frontend Udvikler Test</title>
     <link rel="stylesheet" href="assets/base.css">
+    <!-- Jeg fortrækker at oganisere min kode, hvilke betyder jeg laver mine seperate mapper samt komponenter.
+ Dette er også en genbruglig måde at anvende ens kode på, og gør det letter for en selv at redigere i det samt andre.-->
+    <link rel="stylesheet" href="chr-assets/chr.css">
    </head>
 <body>
 <header>
@@ -34,7 +40,52 @@
 
 <!-- Indsæt din løsning herunder -->
 
+<!-- Skaber en baggrund for selve sektionen.
+Jeg gav en baggrund her for at sikre farven ville være vedligeholdt, man kunne jo bare bruge baggrunden fra "design" div'ne
+men ved at danne denne baggrund skaber man et mere effektivt heierki, men sikre også at selv hvis "design divnerne" ikke loader in, at siden ikke er fuldkommen brudt visuelt-->
+<section class="bg-gray">
+    <div class="container-chr fade-in">
 
+        <div class="design ">
+            <i class="icons fa-regular fa-flag"></i>
+            <h3 class="title">Dansk design</h3>
+            <p>Virksomheden er dansk design i højeste kvalitet <br> til din virksomhed.</p>
+        </div>
+
+        <div class="design">
+            <i class="icons fa-regular fa-star"></i>
+            <h3 class="title">Fremragende TrustScore</h3>
+            <p>Vores kunder vurdere os til fremragende.</p>
+        </div>
+
+        <div class="design">
+            <i class="icons fa-solid fa-truck-front"></i>
+            <h3 class="title">Hurtig levering</h3>
+            <p>Vi levere din order med GLS, så du kan hurtigt og <br> sikkert kan modtage din pakke fra os.</p>
+            <!-- Knap til Modal-->
+            <button id="openModalBtn">Mere info <i class="fa-solid fa-circle-info"></i></button>
+            <!-- Knap til Modal-->
+        </div>
+
+    </div>
+</section>
+
+<!-- Modal
+Dette tog mig lidt tid, jeg er vandt til frameworks, så skulle begynde at tænke lidt gammeldags igen, hvilke var sjovt. Jeg har lavet nogle id'er
+fordi det kommunikere effektivt med javascript, hvor jeg har hold det simpelt med id'er der aktivere og lukker, resten er bare styling -->
+<div id="myModal" class="modal">
+    <!-- Modal-content -->
+    <div class="modal-content">
+        <!-- Jeg syntes at finde ikoner var svært og krævede tid, hvilke lede mig til denne løsning "&times;" <-: -->
+        <span id="closeModalBtn" class="close">&times;</span>
+        <h2>Hurtig levering 🚀</h2>
+        <p class="title"> Vi sender lynhurtigt, så du får dine varer uden unødig ventetid! 📦✨<br>
+            ✔ Fri fragt ved køb over 999,95,-<br>
+            ✔ 30 dages returret – så du kan handle trygt 🛍️
+            <br><br>
+            Bestil inden kl 15, og så sender vi dine vare afsted allerede i dag 🚚</p>
+    </div>
+</div>
 
 
 
@@ -125,6 +176,9 @@
         </div>
     </div>
 </footer>
+
+<!-- Dette er igen et organiserings princip jeg har-->
+<script src="chr-assets/chr-java.js" defer></script>
 
 <script src="assets/base.js" defer></script>
 </body>
